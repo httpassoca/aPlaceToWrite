@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-font-smoothing: antialiased;
+  background-color: #191919;
+  color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.paper {
+  width: 90vw;
+  max-width: 1000px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.paper .input-father {
+  position: relative;
+  width: 300px;
+  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.paper .input-father.closed::before, .paper .input-father.closed .close::after, .paper .input-father.closed .close::before, .paper .input-father.closed [name="title"] {
+  -webkit-transition: all 1s !important;
+  transition: all 1s !important;
+  max-height: 0px;
+  padding: 0;
+}
+
+.paper .input-father::before {
+  -webkit-transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  background-color: lime;
+  max-height: 100px;
+  height: 2px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.paper .input-father.titled {
+  margin-left: 10px;
+}
+
+.paper .input-father.titled::before {
+  background-color: transparent;
+}
+
+.paper .input-father.titled .close::after, .paper .input-father.titled .close::before {
+  background-color: transparent;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.paper .input-father [name="title"] {
+  max-height: 100px;
+  font-size: 1.5rem;
+  color: #e6e6e6;
+  background-color: transparent;
+  width: 300px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.paper .input-father [name="title"]::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+
+.paper .input-father [name="title"]:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.paper .input-father [name="title"]::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.paper .input-father [name="title"]::placeholder {
+  color: #a3a3a3;
+}
+
+.paper .input-father .close {
+  max-height: 100px;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.paper .input-father .close::before, .paper .input-father .close::after {
+  -webkit-transition: background-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: background-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #a3a3a3;
+  width: 1rem;
+  top: calc(50% - 2px);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.paper .input-father .close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.paper textarea {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  margin-top: 10px;
+  display: block;
+  resize: none;
+  width: 100%;
+  background-color: transparent;
+  color: #eee;
+  min-height: calc(1.5rem + 20px);
+  line-height: 1.5rem;
+}
+
+.paper .by {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+  color: #a3a3a3;
+}
+
+.paper .by::before {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background-color: #a3a3a3;
+  position: absolute;
+  margin-right: 10px;
+  right: calc(100% + 5px);
+  top: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+/*# sourceMappingURL=style.css.map */

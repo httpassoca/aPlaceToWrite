@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>A Place To Write</title>
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+    <body>
+        <h1>just write anything...</h1>
+        <div class="paper">
+            <div class="input-father">
+                <input type="text" name="title" placeholder="title, if u want..." onkeyup="verifyTitle()" onkeydown="verifyTitle()">
+                <i class="close" onclick="deleteTitle()"></i>
+            </div>
+            <textarea placeholder="start typing..." onkeyup="verifyTitle()" onkeydown="verifyTitle()"></textarea>
+            <p class="by" >By Someone</p>
+        </div>
+        <script>
+
+            function verifyTitle(){
+                let title = document.querySelector('[name=title]');
+                let titleFather = document.querySelector('.input-father');
+                if (title.value.length >0) titleFather.classList.add('titled')
+                else titleFather.classList.remove('titled') 
+            }
+            function deleteTitle(){
+                document.querySelector('.input-father').classList.add('closed');
+                }
+        </script>
+    </body>
+</html>

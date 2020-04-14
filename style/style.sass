@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+    
+*
+    padding: 0
+    margin: 0
+    border: none
+    outline: none
+    font-family: 'Ubuntu', sans-serif
+    box-sizing: border-box
+html
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    -webkit-font-smoothing: antialiased
+    background-color: #191919
+    color: #e6e6e6
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    padding-top: 20px
+
+h1
+    font-size: 2rem
+    text-align: center
+    margin-bottom: 40px
+.paper
+    width: 90vw
+    max-width: 1000px
+    padding: 10px
+    display: flex
+    flex-direction: column
+
+    .input-father
+        position: relative
+        width: 300px
+        transition: all .6s  cubic-bezier(0.215,0.61,0.355,1)
+        &.closed
+            &::before,.close::after,.close::before,[name="title"]
+                transition: all 1s !important
+                max-height: 0px
+                padding: 0
+        &::before
+            transition: all .1s  cubic-bezier(0.215,0.61,0.355,1)
+            content: ''
+            position: absolute
+            bottom: 1px
+            background-color: lime
+            max-height: 100px
+            height: 2px
+            width: 300px
+            border-radius: 10px
+
+        &.titled
+            margin-left: 10px
+            &::before
+                background-color: transparent
+            .close::after, .close::before
+                background-color: transparent
+                transform: rotate(0deg)
+        [name="title"]
+            max-height: 100px
+            font-size: 1.5rem
+            color: #e6e6e6
+            background-color: transparent
+            width: 300px
+            padding: 5px 10px
+            position: relative
+            &::placeholder
+                color: #a3a3a3
+        .close
+            max-height: 100px
+            cursor: pointer
+            width: 1rem
+            height: 1rem
+            position: absolute
+            right: 5px
+            top: 50%
+            transform: translateY(-50%)
+            &::before, &::after
+                transition: transform .35s  cubic-bezier(0.215,0.61,0.355,1), background-color .6s  cubic-bezier(0.215,0.61,0.355,1)
+                content: ''
+                position: absolute
+                height: 2px
+                background-color: #a3a3a3
+                width: 1rem
+                top: calc(50% - 2px)
+                transform: rotate(45deg) 
+            &::after
+                transform: rotate(-45deg) 
+
+    textarea
+        font-size: 1.2rem
+        padding: 10px 15px
+        margin-top: 10px
+        display: block
+        resize: none
+        width: 100%
+        background-color: transparent
+        color: #eee
+        min-height: calc(1.5rem + 20px)
+        // border-bottom: 1px solid white
+        line-height: 1.5rem
+        
+    .by
+        align-self: flex-end
+        position: relative
+        color: #a3a3a3
+        &::before
+            content: ''
+            width: 10px
+            height: 2px
+            background-color: #a3a3a3
+            position: absolute
+            margin-right: 10px
+            right: calc(100% + 5px)
+            top: 50%
+            transform: translateY(50%)
